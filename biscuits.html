@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biscuits & Cookies - DMart Ready</title>
+    <link rel="stylesheet" href="biscuits.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="top-header">
+            <div class="logo-box">
+                <img src="image/dmart_ready_logo (1).svg" alt="DMart Ready">
+            </div>
+
+            <div class="location-box" id="locationButton">
+
+                <i class="fa-solid fa-location-dot location-icon"></i>
+
+                <div class="location-details">
+
+                    <div class="location-name">
+                        Andheri...
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+
+                    <div class="location-city">
+                        Mumbai
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="delivery-box">
+
+                <div class="delivery-text">
+                    Earliest
+                    <span>Home Delivery</span>
+                    available
+                </div>
+
+                <div class="delivery-time">
+
+                    <i class="fa-regular fa-clock"></i>
+
+                    <strong>
+                        Tomorrow 07:00 AM - 10:00 AM
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+    
+            <div class="search-box">
+
+                <input type="text" id="searchInput" placeholder="Search for Biscuits">
+
+                <button id="searchButton">
+                    SEARCH
+                </button>
+
+            </div>
+
+
+            <div class="signin-box" id="signinButton">
+
+                <i class="fa-regular fa-user"></i>
+
+                <span>
+                    Sign In / Register
+                </span>
+
+            </div>
+
+    
+            <div class="notification-box" id="notificationButton">
+
+                <i class="fa-regular fa-bell"></i>
+
+            </div>
+
+
+
+            <div class="cart-box" id="cartButton">
+
+                <div class="cart-icon">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    <span id="cartCount">
+                        0
+                    </span>
+
+                </div>
+
+                <span class="cart-price" id="cartPrice">
+                    ₹0
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="bottom-header">
+
+            <div class="categories">
+
+                <i class="fa-solid fa-bars"></i>
+
+                <span>
+                    All Categories
+                </span>
+
+            </div>
+
+
+            <nav class="navigation">
+
+                <a href="index.html">
+                    DMart Grocery
+                </a>
+
+                <a href="#">
+                    Ready To Cook
+                </a>
+
+                <a href="#">
+                    Beverages
+                </a>
+
+                <a href="biscuits.html">
+                    Biscuits & Cookies
+                </a>
+
+                <a href="#">
+                    Bath & Body
+                </a>
+
+                <a href="#">
+                    Detergent & Fabric Care
+                </a>
+
+                <a href="#">
+                    Cleaners
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <div class="common-overlay" id="commonOverlay">
+    </div>
+
+
+    <div class="location-overlay" id="locationOverlay">
+        <div class="location-modal">
+            <button class="modal-close location-close" id="closeLocation">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h2>
+                Choose delivery location
+            </h2>
+
+            <div class="location-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="locationSearchInput" placeholder="Search for area, street name or pincode..">
+            </div>
+
+            <div class="map-area">
+                <div class="map-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+            </div>
+
+            <div class="location-promotion">
+                <div class="promotion-image">
+                    <div class="phone-shape">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+
+                    <div class="mini-store">
+                        D-Mart
+                    </div>
+
+                    <div class="tree tree-one"></div>
+
+                    <div class="tree tree-two"></div>
+                </div>
+
+                <div class="promotion-text">
+                    <div>
+                        Your
+                        <strong>
+                            Shopping & Savings
+                        </strong>
+                        Partner
+                    </div>
+                    <p>
+                        One-stop shop for your family needs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="login-overlay" id="loginOverlay">
+
+        <div class="login-modal">
+
+            <button class="login-close" id="closeLogin">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+            <div class="login-left">
+
+                <img src="image/auth.svg" alt="DMart Shopping" class="login-image">
+
+            </div>
+
+            <div class="login-right">
+
+                <h2>
+                    Let's Get You Logged In
+                </h2>
+
+                <label>
+                    Enter your 10 digit mobile number
+                </label>
+
+                <div class="mobile-input">
+
+                    <span>
+                        +91
+                    </span>
+
+                    <input type="tel" id="mobileNumber" maxlength="10">
+
+                </div>
+
+                <p class="terms">
+
+                    By continuing, you agree to our
+
+                    <span>Terms</span>,
+
+                    <span>Refunds</span>
+
+                    and
+
+                    <span>Privacy Policy</span>
+
+                </p>
+
+                <button class="continue-button" id="continueButton" disabled>
+
+                    CONTINUE
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="side-drawer notification-drawer" id="notificationDrawer">
+
+        <button class="drawer-close" id="closeNotification">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+        <div class="drawer-header">
+
+            <h2>
+                Notification
+            </h2>
+
+        </div>
+
+        <div class="notification-body">
+
+            <img src="image/empty-search.svg" alt="No Notifications" class="notification-empty-image">
+
+            <h3>
+                No Notifications Right Now
+            </h3>
+
+            <p>
+                You are up to date
+            </p>
+
+            <button class="green-button">
+                EXPLORE MORE
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="side-drawer cart-drawer" id="cartDrawer">
+
+        <button class="drawer-close" id="closeCart">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <div class="drawer-header">
+
+            <h2>
+                My cart
+            </h2>
+
+        </div>
+
+
+    
+        <div class="cart-items" id="cartItems">
+
+        </div>
+
+
+        
+        <div class="cart-empty" id="cartEmpty">
+
+            <img src="image/empty-cart.svg" alt="Empty Cart">
+
+            <h3>
+                No items in your cart
+            </h3>
+
+            <p>
+                Browse from our wide variety of products &
+                <br>
+                exciting offers
+            </p>
+
+            <button class="green-button">
+                START SHOPPING
+            </button>
+
+        </div>
+
+
+        
+        <div class="cart-bottom" id="cartBottom">
+
+            <div class="cart-saved">
+
+                <span class="bulb">
+                    💡
+                </span>
+
+                <strong id="savedAmount">
+                    ₹0.0
+                </strong>
+
+                <span>
+                    Saved
+                </span>
+
+            </div>
+
+
+            <div class="cart-total">
+
+                <strong id="drawerCartTotal">
+                    ₹0
+                </strong>
+
+                <span>
+                    Cart Total
+                </span>
+
+                <small id="drawerCartCount">
+                    0 Item(s)
+                </small>
+
+            </div>
+
+
+            <button class="full-cart-button">
+
+                FULL CART
+
+                <i class="fa-solid fa-chevron-right"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <main class="page-container">
+        <div class="breadcrumb">
+
+            <span>
+                Home
+            </span>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+            <span>
+                Packaged Food
+            </span>
+
+            <i class="fa-solid fa-chevron-right"></i>
+
+            <span class="current">
+                Biscuits & Cookies
+            </span>
+
+        </div>
+
+
+        <div class="content-layout">
+
+            <aside class="sidebar">
+
+                <div class="sidebar-heading">
+                    Packaged Food
+                </div>
+
+
+                <div class="sidebar-category active">
+                    Biscuits & Cookies
+                    <span>(139)</span>
+                </div>
+
+
+                <ul class="subcategory-list">
+
+                    <li>
+                        Cream Biscuits
+                    </li>
+
+                    <li>
+                        Cookies
+                    </li>
+
+                    <li>
+                        Glucose Biscuits
+                    </li>
+
+                    <li>
+                        Salty Biscuits
+                    </li>
+
+                    <li>
+                        Marie Biscuits
+                    </li>
+
+                    <li>
+                        Digestive Biscuits
+                    </li>
+
+                    <li>
+                        Khari & Toasts
+                    </li>
+
+                    <li>
+                        Biscuits
+                    </li>
+
+                    <li>
+                        Wafer Biscuits
+                    </li>
+
+                    <li>
+                        Health Biscuits
+                    </li>
+
+                </ul>
+
+
+                <div class="sidebar-main-category">
+                    Snacks & Farsans
+                    <span>(255)</span>
+                </div>
+
+                <div class="sidebar-main-category">
+                    Chocolates & Candies
+                    <span>(133)</span>
+                </div>
+
+                <div class="sidebar-main-category">
+                    Sweets
+                    <span>(46)</span>
+                </div>
+
+                <div class="sidebar-main-category">
+                    Pasta & Noodles
+                    <span>(84)</span>
+                </div>
+
+                <div class="sidebar-main-category">
+                    Breakfast Cereals
+                    <span>(60)</span>
+                </div>
+
+                <div class="sidebar-main-category">
+                    Ready To Cook
+                    <span>(105)</span>
+                </div>
+
+                <div class="sidebar-main-category">
+                    Jams & Spreads
+                    <span>(70)</span>
+                </div>
+
+                <div class="sidebar-main-category">
+                    Ketchup & Sauce
+                    <span>(49)</span>
+                </div>
+
+                <div class="sidebar-main-category">
+                    Frozen Foods
+                    <span>(75)</span>
+                </div>
+
+                <div class="sidebar-main-category">
+                    Bakery
+                    <span>(63)</span>
+                </div>
+
+                <div class="sidebar-main-category">
+                    Pickles
+                    <span>(19)</span>
+                </div>
+
+                <div class="sidebar-main-category">
+                    Health Food
+                    <span>(41)</span>
+                </div>
+
+                <div class="sidebar-main-category">
+                    Mukhwas
+                    <span>(13)</span>
+                </div>
+
+                <div class="sidebar-main-category">
+                    Canned Food
+                    <span>(5)</span>
+                </div>
+
+                <div class="sidebar-main-category">
+                    Gourmet Food
+                    <span>(18)</span>
+                </div>
+
+            </aside>
+
+
+            <section class="products-section">
+
+                <div class="page-title">
+
+                    <h1>
+                        Biscuits & Cookies
+                    </h1>
+
+                    <span>
+                        139 products
+                    </span>
+
+                </div>
+
+                <div class="filters">
+
+                    <button class="filter-button">
+                        Brand
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+
+                    <button class="filter-button">
+                        Category
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+
+                    <button class="filter-button">
+                        Type
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+
+                    <button class="filter-button">
+                        Flavours
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+
+                    <button class="filter-button">
+                        Properties
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+
+                    <button class="filter-button">
+                        Weight
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+
+                    <button class="filter-button">
+                        Country Of Origin
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+
+
+                    <div class="sort-box">
+
+                        <span>
+                            Sort by:
+                        </span>
+
+                        <button>
+                            Relevance
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="product-grid" id="productGrid">
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+
+
+    <script src="biscuits.js"></script>
+
+</body>
+
+</html>
